@@ -47,11 +47,11 @@ export default function ThreeBackground() {
       positions[i + 1] = h;
       positions[i + 2] = Math.sin(theta) * radius;
 
-      // Color profile: Neon Crimson to Deep Auburn
+      // Color profile: Premium Mint / Light Green / Emerald
       const ratio = Math.random();
-      colors[i] = 0.9 + ratio * 0.1; // Red: high
-      colors[i + 1] = 0.05 + ratio * 0.05; // Green: very low
-      colors[i + 2] = 0.05 + ratio * 0.1; // Blue: low
+      colors[i] = 0.05 + ratio * 0.1;       // Red: very low
+      colors[i + 1] = 0.72 + ratio * 0.24;  // Green: high
+      colors[i + 2] = 0.4 + ratio * 0.15;   // Blue: mid (adds a beautiful premium mint/emerald vibe)
     }
 
     geometry.setAttribute("position", new THREE.BufferAttribute(positions, 3));
@@ -65,8 +65,8 @@ export default function ThreeBackground() {
     if (pCtx) {
       const gradient = pCtx.createRadialGradient(8, 8, 0, 8, 8, 8);
       gradient.addColorStop(0, "rgba(255, 255, 255, 1)");
-      gradient.addColorStop(0.3, "rgba(239, 68, 68, 0.8)");
-      gradient.addColorStop(0.7, "rgba(239, 68, 68, 0.2)");
+      gradient.addColorStop(0.3, "rgba(16, 185, 129, 0.8)"); // Premium Emerald
+      gradient.addColorStop(0.7, "rgba(16, 185, 129, 0.2)"); // Translucent Green
       gradient.addColorStop(1, "rgba(0, 0, 0, 0)");
       pCtx.fillStyle = gradient;
       pCtx.fillRect(0, 0, 16, 16);
@@ -92,7 +92,7 @@ export default function ThreeBackground() {
     // Sub-geometries: A stunning neon torus knot reflecting mechanical and core strength
     const torusKnotGeo = new THREE.TorusKnotGeometry(4.5, 0.8, 120, 16, 2, 3);
     const torusKnotMat = new THREE.MeshBasicMaterial({
-      color: 0xef4444,
+      color: 0x10b981, // Premium Emerald
       wireframe: true,
       transparent: true,
       opacity: 0.25,
@@ -104,10 +104,10 @@ export default function ThreeBackground() {
     // Inner glowing core
     const sphereGeo = new THREE.IcosahedronGeometry(2, 1);
     const sphereMat = new THREE.MeshBasicMaterial({
-      color: 0xff3333,
+      color: 0x4ade80, // Highlight Mint Green
       wireframe: true,
       transparent: true,
-      opacity: 0.4,
+      opacity: 0.35,
     });
     const innerCore = new THREE.Mesh(sphereGeo, sphereMat);
     ringGroup.add(innerCore);
@@ -115,7 +115,7 @@ export default function ThreeBackground() {
     // Outer orbital rings
     const ringGeo1 = new THREE.RingGeometry(8, 8.2, 64);
     const ringMat1 = new THREE.MeshBasicMaterial({
-      color: 0xff3333,
+      color: 0x10b981, // Premium Emerald Link
       side: THREE.DoubleSide,
       transparent: true,
       opacity: 0.15,
@@ -131,7 +131,7 @@ export default function ThreeBackground() {
     ringGroup.add(orbitRing2);
 
     // Light highlights
-    const pointLight = new THREE.PointLight(0xef4444, 2, 40);
+    const pointLight = new THREE.PointLight(0x10b981, 2.5, 40);
     pointLight.position.set(0, 0, 5);
     scene.add(pointLight);
 

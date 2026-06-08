@@ -70,7 +70,7 @@ export default function TrainingPrograms() {
                             ? "bg-red-950/40 border-red-500/30 text-red-400"
                             : prog.intensity === "High"
                             ? "bg-orange-950/40 border-orange-500/30 text-orange-400"
-                            : "bg-amber-950/40 border-amber-500/30 text-amber-400"
+                            : "bg-emerald-950/40 border-emerald-500/30 text-emerald-400"
                         }`}
                       >
                         {prog.intensity} Intensity

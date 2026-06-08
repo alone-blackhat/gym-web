@@ -86,11 +86,11 @@ const ZONES: MapZone[] = [
     codename: "STAGE_GRAVITY",
     category: "Free Weights",
     difficulty: "Advanced",
-    color: "amber",
-    borderGlow: "shadow-[0_0_20px_rgba(245,158,11,0.2)]",
-    textColor: "text-amber-500",
-    bgColor: "bg-amber-950/20",
-    rgbColor: "#f59e0b",
+    color: "green",
+    borderGlow: "shadow-[0_0_20px_rgba(34,197,94,0.2)]",
+    textColor: "text-green-400",
+    bgColor: "bg-green-950/20",
+    rgbColor: "#22c55e",
     description: "Pro-series rubber-encased iron dumbbells, Olympic straight bars and calibrated plates.",
     icon: Award
   },
@@ -1302,7 +1302,7 @@ export default function EquipmentShowcaseModal() {
                     </p>
 
                     <div className="p-3 bg-zinc-900/60 border border-zinc-850 rounded-xl inline-flex items-center gap-2 font-mono text-[10px]">
-                      <Trophy className="w-4 h-4 text-amber-500" />
+                      <Trophy className="w-4 h-4 text-red-500" />
                       <span className="text-zinc-400">XP CONVERTED:</span>
                       <span className="font-bold text-white">+150 XP AWARDED</span>
                     </div>
@@ -1337,17 +1337,17 @@ export default function EquipmentShowcaseModal() {
                     animate={{ scale: 1, opacity: 1 }}
                     exit={{ scale: 0.75, opacity: 0 }}
                     transition={{ type: "spring", stiffness: 200, damping: 18 }}
-                    className="max-w-md w-full bg-gradient-to-b from-zinc-950 to-black border-2 border-amber-500 p-8 rounded-3xl text-center relative overflow-hidden shadow-[0_0_80px_rgba(245,158,11,0.25)]"
+                    className="max-w-md w-full bg-gradient-to-b from-zinc-950 to-black border-2 border-red-500 p-8 rounded-3xl text-center relative overflow-hidden shadow-[0_0_80px_rgba(16,185,129,0.25)]"
                   >
                     {/* Glowing gold burst ring */}
-                    <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-48 h-48 bg-amber-500/20 rounded-full blur-3xl pointer-events-none" />
+                    <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-48 h-48 bg-red-500/20 rounded-full blur-3xl pointer-events-none" />
 
-                    <div className="w-24 h-24 rounded-full bg-amber-500/10 border-2 border-amber-500 flex items-center justify-center mx-auto mb-6 relative">
-                      <Award className="w-10 h-10 text-amber-500 animate-spin-slow" />
-                      <div className="absolute inset-1 rounded-full border border-dashed border-amber-500/40 animate-spin" />
+                    <div className="w-24 h-24 rounded-full bg-red-500/10 border-2 border-red-500 flex items-center justify-center mx-auto mb-6 relative">
+                      <Award className="w-10 h-10 text-red-500 animate-spin-slow" />
+                      <div className="absolute inset-1 rounded-full border border-dashed border-red-500/40 animate-spin" />
                     </div>
 
-                    <span className="font-mono text-[11px] text-amber-500 font-black uppercase tracking-widest block mb-1">
+                    <span className="font-mono text-[11px] text-red-500 font-black uppercase tracking-widest block mb-1">
                       INTEGRATED LEVEL UP
                     </span>
                     <h2 className="font-display font-black text-4xl uppercase tracking-tight text-white mb-2">
@@ -1359,14 +1359,14 @@ export default function EquipmentShowcaseModal() {
 
                     <div className="mb-6 p-4 bg-zinc-900 border border-zinc-800 rounded-2xl">
                       <span className="font-mono text-[9px] text-zinc-500 uppercase block mb-1">ATHLETIC CLASS SIGNED</span>
-                      <span className="font-display font-black text-xl uppercase text-amber-500 tracking-wider">
+                      <span className="font-display font-black text-xl uppercase text-red-500 tracking-wider">
                         {levelUpAnnouncement.new}
                       </span>
                     </div>
 
                     <button
                       onClick={() => setLevelUpAnnouncement(null)}
-                      className="w-full bg-amber-500 hover:bg-amber-600 text-black font-mono text-xs font-black uppercase tracking-widest py-3.5 rounded-xl cursor-pointer transition-all border border-transparent hover:border-amber-400 shadow-md"
+                      className="w-full bg-red-600 hover:bg-red-700 text-white font-mono text-xs font-black uppercase tracking-widest py-3.5 rounded-xl cursor-pointer transition-all border border-transparent hover:border-red-500 shadow-lg"
                     >
                       ACCREDIT ADVANCEMENT
                     </button>
@@ -1552,7 +1552,7 @@ export default function EquipmentShowcaseModal() {
                       </p>
 
                       <div className="p-3 bg-zinc-900 border border-zinc-800 rounded-xl inline-flex items-center gap-2 font-mono text-[9px] mb-6">
-                        <Trophy className="w-4 h-4 text-amber-500 animate-bounce" />
+                        <Trophy className="w-4 h-4 text-red-500 animate-bounce" />
                         <span className="text-zinc-500">Milestone Bonus Earned:</span>
                         <span className="text-white font-bold">+200 XP Awarded</span>
                       </div>
@@ -1711,7 +1711,7 @@ export default function EquipmentShowcaseModal() {
                                 <div className={`absolute top-0 bottom-0 left-0 w-1 ${
                                   zn.color === "cyan" ? "bg-cyan-500" :
                                   zn.color === "red" ? "bg-red-500" :
-                                  zn.color === "amber" ? "bg-amber-500" : "bg-emerald-500"
+                                  zn.color === "green" ? "bg-green-500" : "bg-emerald-500"
                                 }`} />
                               )}
 
@@ -2010,8 +2010,8 @@ export default function EquipmentShowcaseModal() {
                             equipmentId={selectedEquipment.id}
                             accentColor={
                               currentActiveZone.color === "cyan" ? "#0ea5e9" :
-                              currentActiveZone.color === "red" ? "#ef4444" :
-                              currentActiveZone.color === "amber" ? "#f59e0b" : "#10b981"
+                              currentActiveZone.color === "red" ? "#fc5151" :
+                              currentActiveZone.color === "green" ? "#22c55e" : "#10b981"
                             }
                           />
                         ) : (
