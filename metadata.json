@@ -1,0 +1,8 @@
+{
+  "name": "Elite Fitness Gym",
+  "description": "An elite, modern, and visually stunning premium gym website featuring realistic Indian mock data, responsive layout, and interactive 3D particle physical simulators.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
